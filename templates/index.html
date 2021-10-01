@@ -4,34 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename = 'css/style.css') }}"
-    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
   </head>
   <body>
-    <form action="/" method="POST" enctype="multipart/form-data">
-      <label for="first">CHOOSE FILE</label>
-      <br />
-      <input
-        type="file"
-        name="myfile"
-        enctype="multipart/form-data"
-        id="first"
-        class="custom-file-input"
-      />
-      <br />
-      <button type="submit">SUBMIT</button>
-      <img
-        src="{{ url_for('static', filename = input_path) }}"
-        alt="input_image"
-      />
-      <img
-        src="{{ url_for('static', filename = output_path) }}"
-        alt="output_image"
-      />
-    </form>
-    <script src="{{ url_for('static', filename = 'js/style.js') }}"></script>
+    <ul class="nav-container">
+        <!-- <div class="logo">ITI</div> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="convert.html">Translate</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <div class="container">
+      <div class="text-container">
+        <h2>IMAGE TO IMAGE</h2>
+        <h1>TRANSLATOR</h1>
+        <a href="convert.html" id="btn">Translate</a>
+      </div>
+      <div class="img-container">
+          <img src="img1.svg" alt="image" class="img-container">
+      </div>
+    </div>
   </body>
 </html>
