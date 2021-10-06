@@ -11,21 +11,19 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename = './style.css') }}"
+      href="{{ url_for('static', filename = 'css/style.css') }}"
     />
   </head>
   <body>
     <ul class="nav-container">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="convert.html">Translate</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('convert') }}">Translate</a></li>
+      <li><a href="{{ url_for('about') }}">About Us</a></li>
     </ul>
     <div class="form-container">
-      <form action="/" method="POST" enctype="multipart/form-data">
-        <!-- <label for="first">CHOOSE FILE</label> -->
+      <form action="/convert" method="POST" enctype="multipart/form-data">
         <br />
         <div>
           <label for="formFileLg" class="form-label"
@@ -34,16 +32,10 @@
           <input
             class="form-control form-control-lg"
             id="formFileLg"
+            name="myfile"
             type="file"
           />
         </div>
-        <!-- <input
-        type="file"
-        name="myfile"
-        enctype="multipart/form-data"
-        id="first"
-        class="custom-file-input"
-      /> -->
         <br />
         <button type="submit" id="btn">SUBMIT</button>
         <div class="image-container">
