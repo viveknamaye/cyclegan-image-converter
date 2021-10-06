@@ -1,6 +1,6 @@
 # cyclegan-image-converter
 
-A simple image converter using cyclegan model.
+A simple photo to monet image converter using cyclegan model.
 
 ![CONVERT_PAGE](assets/ss.jpeg)
 
